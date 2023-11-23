@@ -1,18 +1,36 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import ChatAppcontext from '../context/Context'
+import Alert from './Alert'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const context =useContext(ChatAppcontext)
+  const {alert,setAlert}=context
   return (
     <>
     <div className="navbar">
-        <div className="logo"><Link>App</Link></div>
-        <ul className="nav-links">
+        <div className="logo"><Link>SwiftChat</Link></div>
+        <div className={`nav-items ${isOpen ? 'active' : ''}`}>
+
+        <ul className='nav-links'>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About Us</Link></li>
             <li><Link to='/contact'>Contact Us</Link></li>
         </ul>
-        <button className="room-btn">Create Chat Room</button>
+        <div className="btn-container">
+        <Link to='/createroom'><button className="room-btn">Create Room</button></Link>
+        <Link to='joinroom'><button className="room-btn">Join Room</button></Link>
+        </div>
+        </div>
+        <i onClick={toggleNavbar} className=" burger fa-solid fa-bars fa-xl"></i>
+        {alert && (<Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)}/>)}
     </div>
+   
     <Outlet/>
     </>
   )

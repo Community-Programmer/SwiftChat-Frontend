@@ -1,0 +1,76 @@
+/* Default styles */
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 55%;
+    border: 1px solid rgb(197, 195, 195);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.chatroom-form label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.chatroom-form input {
+    width: 100%;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    margin: 0.8rem 0;
+}
+
+.create-room-btn {
+    background-color: #FFC727;
+    border: 1px solid #ebb31c;
+    border-radius: 0.5rem;
+    padding: 15px 15px;
+    width: 100%;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        height: 65%;
+    }
+
+   
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .chatroom-form label {
+        font-size: 1rem;
+    }
+
+    .chatroom-form input {
+        padding: 0.8rem;
+    }
+
+    .create-room-btn {
+        padding: 10px;
+    }
+
+}

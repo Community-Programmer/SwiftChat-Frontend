@@ -1,8 +1,10 @@
 
+
+
 /* Navbar Design  */
 
 .navbar{
-  background-color: rgb(226, 226, 248);
+  background-color: #455A64;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +15,12 @@
   gap: 2rem;
 
 }
+.nav-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
 .nav-links li{
   list-style: none;
@@ -22,7 +30,7 @@
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .logo{
@@ -33,13 +41,75 @@
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: bolder;
+  color: white;
+}
+
+.btn-container{
+  margin-right: 2rem;
 }
 
 .room-btn{
-  margin-right: 2rem;
-  padding: 0.5rem;
-  background-color: rgb(205, 164, 243);
-  border-color: rgb(164, 91, 233);
+  margin-right: 5px;
+  padding: 8px;
+  background-color: #FFC727;
+  border: 1px solid #263238;
   border-radius: 8px;
   font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+.room-btn:hover{
+  background-color: #fcd774;
+}
+
+.navbar i{
+  display: none;
+}
+
+@media screen and (max-width:736px){
+  .navbar i{
+    display: block;
+    margin-right: 10px;
+  }
+
+  .navbar{
+    height: 50px;
+  }
+
+  .nav-items{
+    position: absolute;
+    flex-direction: column;
+    background-color: #f1f5f1;
+    top: 7%;
+    padding: 1.8rem 0;
+    gap:1.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 36;
+  }
+   
+  .nav-links {
+    display: flex;
+    /* gap: 2rem; */
+    width: 100%;
+    align-items: center;
+}
+
+.btn-container {
+  margin-right: 0rem;
+}
+
+
+  .nav-items.active{
+    transform: translateX(0);
+  
+}
+.nav-links li a{
+  color: black;
+}
+.nav-links{
+  flex-direction: column;
+  gap: 2rem;
+}
 }

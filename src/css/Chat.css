@@ -1,0 +1,144 @@
+.message-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 80%;
+    overflow-y: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.message-bar{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+textarea{
+  
+    width: 95%;
+    resize: none;
+}
+
+i{
+    cursor: pointer;
+    
+}
+
+.send{
+  color: rgb(77, 77, 245);
+}
+
+.eye{
+  color: rgb(231, 77, 77);
+}
+
+.send:hover{
+  color: rgb(62, 62, 236);
+}
+
+.user-joined-message{
+   
+   color: green;
+   margin-right: 10px;
+   font-weight: bolder;
+    align-self: flex-end;
+    
+    
+}
+
+.user-left-message{
+   
+  color: rgb(231, 77, 77);
+  margin-right: 10px;
+  font-weight: bolder;
+   align-self: flex-end;
+   
+   
+}
+.chat-container{
+  display: flex;
+  height: calc(100vh - 53px);
+  gap: 2px;
+  
+
+}
+.left-section{
+  width: 25%;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+.leave-btn{
+  text-align: center;
+}
+
+.leave-btn i{
+  color: rgb(231, 77, 77);
+}
+
+
+.left-section ul {
+  height: 74%;
+}
+
+.room-info{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.eye {
+  display: none;
+}
+
+.right-section{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  border: 2px solid;
+  padding: 10px;
+  gap: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .chat-container {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .left-section {
+      display: none;
+      
+  }
+
+  .right-section {
+    width: 96%;
+    height: 100%;
+  }
+
+  .message-box {
+      height: 90%;
+  }
+
+  .eye{
+    display: block;
+  }
+  #slash-eye{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+  }
+
+  .active-pane{
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 93%;
+    height: 100%;
+  }
+  
+}

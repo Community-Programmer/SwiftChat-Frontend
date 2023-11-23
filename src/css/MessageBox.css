@@ -1,0 +1,29 @@
+.message{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    width: 50%;
+}
+
+
+.receive{
+    background-color: #eeeeee;
+    text-align: left;
+    align-self: flex-start;
+}
+
+
+.sent {
+    background-color: #dcf8c6;
+    text-align: right;
+    align-self: flex-end;
+  }
+
+
+.timestamp {
+    font-size: 0.8em;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+  }
