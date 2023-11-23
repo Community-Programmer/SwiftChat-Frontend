@@ -46,8 +46,10 @@
         margin-top: 160px;
     }
 
+    
     .home-text {
         width: 80%;
+        margin: 0;
     }
 
     .home-text h1 {
