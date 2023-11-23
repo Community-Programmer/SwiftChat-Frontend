@@ -42,7 +42,9 @@
     }
 
     .home-text {
-        width: 80%; 
+        width: 95%; 
+        font-size: 2rem;
+        
     }
 
     .cta-btn {
