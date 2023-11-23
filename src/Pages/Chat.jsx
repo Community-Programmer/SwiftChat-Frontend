@@ -9,7 +9,7 @@ import MessageBox from '../components/MessageBox';
 const Chat = () => {
   const navigate = useNavigate()
     const context=useContext(ChatAppcontext)
-    const {info,joinedUsers, setJoinedUsers}=context
+    const {info,joinedUsers, setJoinedUsers,showAlert}=context
     const { id } = useParams();
     const [messages, setMessages] = useState([{username:'',message:'',time:'',type:''}]);
 
@@ -23,9 +23,7 @@ const Chat = () => {
 
         };
 
-     
-
-        // Listen for 'recieve' event
+    
         const userjoined = (data) => {
             console.log('userjoined:', data);
             setJoinedUsers((prevUsers) => [...prevUsers, data.username]);
@@ -56,14 +54,13 @@ const Chat = () => {
         socket.on('user-disconnected', userDisconnected);
         socket.on('user-exited', userExited);
 
-        // Clean up the event listener when the component unmounts
+       
         return () => {
             socket.off('recieve', receiveMessage);
             socket.off('user-joined', userjoined);
             socket.off('user-disconnected', userDisconnected);
             socket.off('user-exited', userExited);
         };
-
        
 
       // eslint-disable-next-line
@@ -71,6 +68,7 @@ const Chat = () => {
     const handleRemoveUser = () => {
         socket.emit('exitRoom', {roomId:info.roomId,username:info.name});
         navigate('/')
+        showAlert(`Exited Room (${info.roomName})`, 'success')
         
       };
     

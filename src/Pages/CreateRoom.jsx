@@ -8,7 +8,7 @@ const CreateRoom = () => {
 
   const navigate=useNavigate()
   const context = useContext(ChatAppcontext)
-  const {info,setinfo}=context
+  const {info,setinfo,showAlert}=context
 
 
   const handlechange=(e)=>{
@@ -30,10 +30,17 @@ const CreateRoom = () => {
   const handleclick=(e)=>{
     e.preventDefault()
     const RoomId = generateShortRoomId();
-    socket.emit('create-room', {username:info.name,roomName:info.roomName,roomId:RoomId});
-    setinfo({...info,roomId:RoomId})
-  
-    navigate(`/room/${RoomId}`)
+    socket.emit('create-room', {username:info.name,roomName:info.roomName,roomId:RoomId},(ack)=>{
+      if(ack.success){
+        setinfo({...info,roomId:RoomId})
+        navigate(`/room/${RoomId}`)
+        showAlert('Room Created!', 'success')
+      }
+      else{
+        showAlert('Room Not Created!', 'error')
+      }
+    });
+    
   }
 
 

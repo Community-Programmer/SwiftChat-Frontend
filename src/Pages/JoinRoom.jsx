@@ -19,14 +19,13 @@ const {showAlert,info,setinfo, setJoinedUsers}=context
 
   
     socket.on('message',(data)=>{
-        console.log(data)
         showAlert(data, 'error')
         
     })
 
     socket.on('messages',(data)=>{
-        console.log("Ok",data)
-        showAlert(data.roomName, 'success')
+        
+        showAlert(`Joined Room (${data.roomName})`, 'success')
         setinfo({...info,roomName: data.roomName})
         setJoinedUsers(data.users || []);
         navigate(`/room/${info.roomId}`)

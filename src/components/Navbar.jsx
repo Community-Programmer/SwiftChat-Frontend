@@ -18,13 +18,13 @@ const Navbar = () => {
         <div className={`nav-items ${isOpen ? 'active' : ''}`}>
 
         <ul className='nav-links'>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/about'>About Us</Link></li>
-            <li><Link to='/contact'>Contact Us</Link></li>
+            <li><Link to='/' onClick={toggleNavbar}>Home</Link></li>
+            <li><Link to='/about' onClick={toggleNavbar}>About Us</Link></li>
+            <li><Link to='/contact' onClick={toggleNavbar}>Contact Us</Link></li>
         </ul>
         <div className="btn-container">
-        <Link to='/createroom'><button className="room-btn">Create Room</button></Link>
-        <Link to='joinroom'><button className="room-btn">Join Room</button></Link>
+        <Link to='/createroom' onClick={toggleNavbar}><button className="room-btn">Create Room</button></Link>
+        <Link to='joinroom' onClick={toggleNavbar}><button className="room-btn">Join Room</button></Link>
         </div>
         </div>
         <i onClick={toggleNavbar} className=" burger fa-solid fa-bars fa-xl"></i>

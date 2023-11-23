@@ -42,12 +42,16 @@
         flex-direction: column-reverse;
         text-align: center;
         height: 100vh;
-        position: relative;
-        top: 140px;
+        position: absolute;
+        margin-top: 160px;
     }
 
     .home-text {
         width: 80%;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
     }
 
     .cta-btn {
@@ -60,7 +64,13 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
+
+  
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
     .home-text {
         width: 100%;
     }
@@ -68,4 +78,16 @@
     .cta-btn {
         width: 70%;
     }
+}
+
+@media screen and (max-width: 368px) {
+    .home {
+        margin-top: 230px;
+    }
+
+    dotlottie-player{
+        width: 300px ;
+        height: 200px ;
+    }
+
 }
