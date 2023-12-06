@@ -1,3 +1,8 @@
+
+# SwiftChat
+
+Elevate your group communication experience with SwiftChat, a dynamic web application that brings people together through seamless and secure group conversations. Unleash the power of real-time communication using unique room IDs, making every group chat a personalized and exclusive space.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
