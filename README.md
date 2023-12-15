@@ -3,6 +3,8 @@
 
 Elevate your group communication experience with SwiftChat, a dynamic web application that brings people together through seamless and secure group conversations. Unleash the power of real-time communication using unique room IDs, making every group chat a personalized and exclusive space.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b75133e-2f32-448c-887a-f81fca80d005/deploy-status)](https://app.netlify.com/sites/chat-swift/deploys)
+
 ![image](https://github.com/Community-Programmer/SwiftChat-Frontend/assets/76515568/59ed228d-7f7e-4920-a943-f4acf2a33d15)
 
 
