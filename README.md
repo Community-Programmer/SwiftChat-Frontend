@@ -7,6 +7,8 @@ Elevate your group communication experience with SwiftChat, a dynamic web applic
 
 ![image](https://github.com/Community-Programmer/SwiftChat-Frontend/assets/76515568/59ed228d-7f7e-4920-a943-f4acf2a33d15)
 
+![image](https://github.com/Community-Programmer/SwiftChat-Frontend/assets/76515568/b409debf-f92e-4f8c-8bc6-ce4f3fced574)
+
 
 # Getting Started with Create React App
 
